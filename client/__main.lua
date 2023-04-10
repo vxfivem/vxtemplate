@@ -1,18 +1,6 @@
-print('hello client')
-
-vx.RegisterRpc('qwe', function(...)
-    local res = 0
-    for i, v in ipairs({
-        ...
-    }) do
-        res = res + v
-    end
-    return res
-end)
-
-vx.RegisterKey('keyboard', 'q', 'Test', function()
-    print('press')
-end, function()
-    vx.InvokeUiHandler('qeq', 1)
-end)
-
+vx.logger:debug(vx.locale.test.client({
+    testVal = "TEST 1"
+}))
+vx.logger:debug(vx.locale.test.shared({
+    testVal = "TEST 2"
+}))

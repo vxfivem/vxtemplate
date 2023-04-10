@@ -1,7 +1,6 @@
-print('hello server')
-
-RegisterCommand('c', function(source)
-    print('qwe')
-    local val = vx.InvokeRpc('qwe', source, 1, 2, 3, 4)
-    print(val)
-end, false)
+vx.logger:debug(vx.locale.test.server({
+    testVal = "TEST 1"
+}))
+vx.logger:debug(vx.locale.test.shared({
+    testVal = "TEST 2"
+}))

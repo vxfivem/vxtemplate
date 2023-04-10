@@ -1,1 +1,5 @@
-{}
+{
+    "test": {
+        "client": "Some test (client) = {{testVal}}"
+    }
+}

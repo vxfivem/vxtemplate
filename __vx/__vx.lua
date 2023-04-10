@@ -63,5 +63,6 @@ end
     end
 
     vx.locale = locale.lang
+
 end)()
 
