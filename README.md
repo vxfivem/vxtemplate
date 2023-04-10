@@ -6,7 +6,7 @@ The temlate that contains everything you may need for FiveM resource development
 
 ### The resource constants are used by internal vx systems.
 
-To set the constant you need to go to the `fxmanifest.lua` and change the values to whatever you want. However, there are some restrictions.  
+To set custom value to any constant you need to go to the `fxmanifest.lua` and change the values to whatever you want. However, there are some restrictions.  
 There is the list of the constant.
 
 - **ENV** - any value. No use for now.
