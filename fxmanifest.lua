@@ -3,7 +3,13 @@ fx_version 'cerulean'
 
 version '0.0.1'
 
+files {
+    'locale/**/locale.shared.json',
+    'locale/**/locale.client.json'
+}
+
 shared_scripts {
+    '__vx/luang.lua',
     '__vx/luaoop.lua',
     '__vx/logger.lua',
     '__vx/typecheck.lua',
@@ -26,3 +32,6 @@ ENV 'some env'
 
 -- if set to 'true' - enables the debug mode
 IS_DEBUG 'true'
+
+-- current language, VX loads locales from ./locale/{{LANGUAGE}}/locale.*.json
+LANGUAGE 'en'
