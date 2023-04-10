@@ -16,8 +16,8 @@ client side rpc handling
 ```
 
 server side rpc handling
-```
-   vx.RegisterRpc("testRpc", function(source --[[always passed as the first argument]], argOne, argTwo)
+```lua
+   vx.RegisterRpc("testRpc", function(source -- [[always passed as the first argument]], argOne, argTwo)
         return argOne + argTwo 
     end)
 ```
