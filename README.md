@@ -10,10 +10,8 @@ To set custom value to any constant you need to go to the `fxmanifest.lua` and c
 There is the list of the constant.
 
 - **ENV** - any value. No use for now. Exposed through `vx.ENV`
-- **IS_DEBUG** - 'true' or 'false'. Will start the resource in debug mode. Exposed throught `vx.IS_DEBUG`
-- **LANGUAGE** - 'en' by default. Tells VX from where to load the locales. Exposed throught `vx.LANGUAGE`
-
-
+- **IS_DEBUG** - 'true' or 'false'. Will start the resource in debug mode. Exposed through `vx.IS_DEBUG`
+- **LANGUAGE** - 'en' by default. Tells VX from where to load the locales. Exposed through `vx.LANGUAGE`
 
 ## RPC system
 
@@ -77,16 +75,23 @@ end
 ```
 
 To create a logger use the following syntax
+
 ```lua
 local logger = Logger(context)
 ```
+
 The context argument is a prefix before all the logs
 
 For now, the only out used is **console**.
+
 ## Localization
+
 vx uses [Luang](https://github.com/ImagicTheCat/Luang) package for localization porpuses
+
 ## OOP
+
 vx uses [Luaoop](https://github.com/ImagicTheCat/Luaoop) package for oop porpuses
+
 ## Used solutions
 
 - **Luaoop** - https://github.com/ImagicTheCat/Luaoop
