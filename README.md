@@ -104,13 +104,13 @@ The repository contains a custom react-vite-typescript-redux-toolkit [template](
 
 To call any callback that is registered by `vx.RegisterUiHandler(name, handler)` or [SendNUIMessage](https://docs.fivem.net/docs/scripting-manual/nui-development/nui-callbacks/) function look at the example below
 
-```js
+```ts
 import { gameEmitter } from "relative.path/game.emitter";
 
 // ...
+
 const payload = { someValue: 42 };
-const value =
-  (await gameEmitter.emitAsync) < number > ("nuiCallbackName", payload); // 21
+const value = await gameEmitter.emitAsync<number>("nuiCallbackName", payload); // 21
 ```
 
 ```lua
@@ -129,9 +129,47 @@ end)
 
 if you dont need the result, you can just simply replicate the following example
 
-```js
+```ts
+import { gameEmitter } from "relative.path/game.emitter";
+
+// ...
+
 const payload = { someValue: 42 };
 gameEmitter.emit("nuiCallbackName", payload); // returns void
+```
+
+It is also possible to listen for client-triggered events on browser's side
+
+```ts
+import { gameEmitter } from "relative.path/game.emitter";
+
+const handler = (value: number) => {
+  console.log(value); // 42
+};
+
+gameEmitter.on("someNuiEventName", handler);
+```
+
+Invoking it from client
+
+```lua
+vx.InvokeUi("someNuiEventName", 42)
+```
+
+You can unlisten any event as well
+
+```ts
+import { gameEmitter } from "relative.path/game.emitter";
+
+const handler = (value: number) => {
+  console.log(value); // 42
+};
+
+gameEmitter.on("someNuiEventName", handler);
+
+// do some logic
+
+gameEmitter.off("someNuiEventName", handler);
 ```
 
 ## Used solutions
