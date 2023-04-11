@@ -22,7 +22,7 @@ function vx.RegisterUiHandler(name, handler)
     end)
 end
 
-function vx.InvokeUiHandler(name, payload)
+function vx.InvokeUi(name, payload)
     SendNUIMessage({
         eventName = name,
         payload = payload
