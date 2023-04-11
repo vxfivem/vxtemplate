@@ -11,14 +11,11 @@ function vx.RegisterUiHandler(name, handler)
         end
 
         if not success then
-            cb({
-                __error = result
-            })
+            cb(nil)
+            return error(result)
         end
 
-        cb({
-            __result = result
-        })
+        cb(result)
     end)
 end
 

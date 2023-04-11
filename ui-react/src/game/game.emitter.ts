@@ -28,7 +28,7 @@ class GameEmitter {
     this.eventEmitter.on(event, handler);
   }
 
-  public emit<T>(event: string, payload: T = null!): void {
+  public emit(event: string, payload: unknown = null!): void {
     fetch(`https://${GetParentResourceName()}/${event}`, {
       method: 'POST',
       headers: {
@@ -39,7 +39,7 @@ class GameEmitter {
       .then((r) => r)
       .catch(console.error);
   }
-  public emitAsync<TPayload, TResult>(event: string, payload: TPayload = null!): Promise<TResult> {
+  public emitAsync<TResult>(event: string, payload: unknown = null!): Promise<TResult> {
     return fetch(`https://${GetParentResourceName()}/${event}`, {
       method: 'POST',
       headers: {
