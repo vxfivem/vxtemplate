@@ -98,7 +98,7 @@ vx uses [Luaoop](https://github.com/ImagicTheCat/Luaoop) package for oop porpuse
 
 ## UI
 
-The repository contains a custom react-vite-typescript-redux-toolkit [template](./ui-src).
+The repository contains a custom react-vite-typescript-redux-toolkit [template](./ui-react).
 
 #### Client integration
 
