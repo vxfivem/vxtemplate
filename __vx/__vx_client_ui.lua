@@ -1,3 +1,5 @@
+local handlers = {}
+
 function vx.RegisterUiHandler(name, handler)
     assert(type(name) == 'string' and name ~= "", "name should be a non-empty string")
     assert(Isfunction(handler), 'callback should be a function')
@@ -20,8 +22,5 @@ function vx.RegisterUiHandler(name, handler)
 end
 
 function vx.InvokeUi(name, payload)
-    SendNUIMessage({
-        eventName = name,
-        payload = payload
-    })
+    SendNUIMessage({eventName = name, payload = payload})
 end
